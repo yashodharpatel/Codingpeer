@@ -26,9 +26,7 @@
 </ul>
 
 <h2>Tech Stack: </h2>
-<ul>
-	<li>Front-end development:</li>
-</ul>
+<p><strong>Front-end development:</strong></p>
 <ol>
 	<li>HTML5</li>
 	<li>CSS</li>
@@ -37,9 +35,7 @@
 	<li>React JS</li>
 </ol>
 
-<ul>
-	<li>Back-end development:</li>
-</ul>
+<p><strong>Back-end development:</strong></p>
 <ol>
 	<li>Firebase (Real-time Database)</li>
 </ol>
@@ -48,7 +44,6 @@
 <ul>
 	<li>Visual Studio Code</li>
 </ul>
-<br>
 
 <h2>Running node locally</h2>
 
