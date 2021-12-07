@@ -24,6 +24,7 @@
 <ul>
 	<li>We want to help as many as developers connect with each other and build projects together.</li>
 </ul>
+<br>
 
 <h2>Tech Stack: </h2>
 <p><strong>Front-end development:</strong></p>
@@ -44,6 +45,7 @@
 <ul>
 	<li>Visual Studio Code</li>
 </ul>
+<br>
 
 <h2>Running node locally</h2>
 
