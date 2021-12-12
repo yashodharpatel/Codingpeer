@@ -1,6 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -8,7 +7,6 @@
 }
 
 html {
-  /* overflow-y: scroll; */
   scroll-behavior: smooth;
 }
 
@@ -16,49 +14,18 @@ body {
   cursor: default;
   user-select: none;
   -webkit-tap-highlight-color: transparent;
-  /* font-family: benton-sans, "Helvetica Neue", helvetica, arial, sans-serif; */
   font-family: "Ubuntu", sans-serif;
 }
 
 /*Header*/
-
-.logo {
-  /* background-color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center; */
-  /* border-radius: 0.25rem; */
-  /* padding: 2px 10px; */
-  font-size: 28px;
-  font-weight: bold;
-
-  color: #048dbb;
-}
-
-.login-btn {
-  margin-left: 40px;
-}
-
 .nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 60px;
-  /* padding: 0% 4%; */
-  /* background-color: #225275; */
-
   height: 72px;
   box-shadow: 0 1px 3px 0 rgb(0 0 0 / 15%);
   margin-bottom: 2px;
-
-  /* color: white; */
-  z-index: 100;
-}
-
-.inside-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  z-index: 10;
 }
 
 .set-width-1000 {
@@ -66,15 +33,33 @@ body {
   width: 95%;
   margin: 0 auto;
 }
+
 .set-width-1200 {
   max-width: 1200px;
   width: 95%;
   margin: 0 auto;
 }
+
 .set-width-1400 {
   max-width: 1400px;
   width: 95%;
   margin: 0 auto;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: #048dbb;
+}
+
+.login-btn {
+  margin-left: 40px;
+}
+
+.inside-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 /* .logo {
@@ -109,13 +94,6 @@ body {
 .dropdown-menu li {
   padding: 0px 10px;
 }
-/* .nav-links li a:hover {
-  color: #edf1f2;
-} */
-
-/* .nav-links li:last-child {
-  padding-right: 0;
-} */
 
 .nav-links li .nav-icon {
   font-size: 26px;
@@ -165,23 +143,11 @@ body {
 /*Modal*/
 .modal-header {
   border-bottom: none;
-  /* padding: 20px;
-  padding-bottom: 0; */
 }
 
-/* .modal-body { */
-/* width: 95%;
-  margin: auto; */
-/* padding: 40px 30px; */
-/* } */
-
-/* .modal-footer {
-  border-top: 1px solid #ddd;
+.modal-footer {
   background-color: #f5f5f5;
-  padding: 16px;
-  font-size: 17px;
-  color: #4a5568;
-} */
+}
 
 .input-box {
   border: 1px solid #cbcbd2;
@@ -195,7 +161,7 @@ body {
 }
 
 .input-box:focus-within {
-  border-color: #3f5fd3;
+  border-color: #048dbb;;
   outline: 0;
   -webkit-box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%),
     0 0 8px rgb(121 88 159 / 60%);
@@ -256,12 +222,6 @@ body {
   color: white;
 }
 
-/* .vr {
-  opacity: 0.9;
-  height: 12px;
-  margin: 0px 10px;
-} */
-
 .dashboard {
   background-color: #fafafa;
   padding: 40px 0px;
@@ -282,10 +242,7 @@ body {
   /* text-transform: uppercase; */
   font-size: 36px;
   line-height: 45px;
-  /* font-family: 'Poppins', sans-serif; */
-  /* font-family: Circular, "Helvetica Neue", Helvetica, Arial, sans-serif; */
-  /* font-family: 'Varela Round', sans-serif; */
-  font-family: "Ubuntu", sans-serif;
+  
   margin-bottom: 21px;
   color: #ffffff;
 }
@@ -295,7 +252,6 @@ body {
   font-weight: 500;
   font-size: 17px;
   line-height: 21px;
-  font-family: "Ubuntu", sans-serif;
 }
 
 .create-account-form {
@@ -311,7 +267,6 @@ body {
 }
 
 .field-title {
-  font-family: "Ubuntu", sans-serif;
   font-size: 24px;
   line-height: 30px;
   font-weight: 500;
@@ -333,21 +288,7 @@ body {
 
 .change-display > * {
   width: 50%;
-  /* margin-right: 15px; */
 }
-
-/* .profile-pic {
-  width: 20%;
-}
-
-.profile-info {
-  width: 80%;
-} */
-
-/* .profile-image {
-  width: 92%;
-  border-radius: 8px;
-} */
 
 .social-title {
   font-size: 18px;
@@ -377,7 +318,6 @@ body {
   border: 1px solid #ced4da;
   padding: 6.4px 9.6px 6.4px 35.2px;
   border-radius: 0.25rem;
-  /* margin-bottom: 16px; */
   margin: 0px 10px 10px 0px;
 }
 
@@ -398,12 +338,6 @@ body {
   border-radius: 50%;
   width: 80px;
   height: 80px;
-  /* background-repeat: no-repeat;
-  background-position: center;
-  background-image: url(../assets/socials/myphoto.jpg);
-  background-size: cover; */
-  /* border: 2px solid #f2f2f2; */
-  /* background-color: black; */
 }
 
 .change-card-display {
@@ -525,9 +459,6 @@ body {
 
 .userprofile-city {
   font-size: 18px;
-  /* color: grey; */
-  /* padding-top: 2px; */
-  /* color: #192325; */
   color: black;
   margin: 0px;
 }
@@ -570,7 +501,8 @@ body {
 
 .userprofile-skills,
 .userprofile-intrests,
-.projects,.addproject-btn {
+.projects,
+.addproject-btn {
   padding: 0px 40px;
 }
 
@@ -579,8 +511,6 @@ body {
   font-weight: bold;
   padding: 6px 40px;
   margin-bottom: 18px;
-  /* border-bottom: 2px solid #225275; */
-  /* border-bottom: 2px solid #38688a; */
   line-height: 30px;
   border-bottom: 2px solid rgba(0, 0, 0, 0.125);
 }
@@ -611,16 +541,10 @@ body {
 }
 
 .userprofile-socials {
-  /* align-items: center;
-  justify-content: center;
-  grid-gap: 18px;
-  font-size: 18px; */
-
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   grid-gap: 12px;
-  /* font-size: 16px; */
 }
 
 .userprofile-socials i {

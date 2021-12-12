@@ -121,7 +121,7 @@ export default function Login() {
             </div>
             <div className="modal-footer">
               <div className="w-100 text-center">
-                New to Company?{" "}
+                New to Codingpeer?{" "}
                 <Link
                   className="text-decoration-none"
                   data-bs-toggle="modal"
