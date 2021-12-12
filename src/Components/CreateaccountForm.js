@@ -149,55 +149,6 @@ export default function CreateaccountForm() {
             </div>
           </div>
 
-          {/* <div className="change-display">
-              <div className="mb-3">
-                <label htmlFor="phone" className="form-label">
-                  Phone Number
-                </label>
-                <input
-                  type="number"
-                  className="form-control"
-                  id="phone"
-                  placeholder="Phone Number"
-                  value={phone}
-                  onChange={(e) => {
-                    setPhone(e.target.value);
-                  }}
-                />
-              </div>
-              <div className="mb-3">
-                <label htmlFor="email" className="form-label">
-                  Email address <span className="required">*</span>
-                </label>
-                <input
-                  type="email"
-                  className="form-control"
-                  id="email"
-                  value={email}
-                  onChange={(e) => {
-                    setEmail(e.target.value);
-                    setEmailWarning(
-                      "By verifying a new email, " +
-                        currentUserEmail +
-                        " will no longer will associated with your account."
-                    );
-                    if (e.target.value === currentUserEmail) {
-                      setEmailWarning("");
-                    }
-                  }}
-                  aria-describedby="emailWarning"
-                  required
-                />
-                <div
-                  id="emailWarning"
-                  className="form-text"
-                  style={{ color: "red" }}
-                >
-                  {emailWarning}
-                </div>
-              </div>
-            </div> */}
-
           <div className="change-display">
             <div className="mb-3">
               <label htmlFor="city" className="form-label">
@@ -230,22 +181,6 @@ export default function CreateaccountForm() {
               />
             </div>
           </div>
-
-          {/* <div className="mb-3">
-            <label htmlFor="bio" className="form-label">
-              Bio
-            </label>
-            <textarea
-              className="form-control"
-              id="bio"
-              rows="3"
-              placeholder="Tell us little bit about yourself"
-              // value={skills}
-              // onChange={(e) => {
-              //   setSkills(e.target.value);
-              // }}
-            />
-          </div> */}
         </div>
 
         <div className="field">

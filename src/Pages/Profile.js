@@ -21,7 +21,6 @@ export default function Profile(props) {
     });
   }, []);
 
-  // console.log();
   return (
     <>
       <Header className="set-width-1200" />

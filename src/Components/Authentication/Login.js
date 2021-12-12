@@ -19,10 +19,6 @@ export default function Login() {
       await login(emailRef.current.value, passwordRef.current.value);
       history.push("/dashboard/");
       document.querySelector(".modal-backdrop").remove();
-      // document.querySelector(".modal").removeClass("in");
-      // document.querySelector("body").removeClass("modal-open");
-      // document.querySelector("body").css("padding-right", "");
-      // document.querySelector(".modal").hide();
     } catch {
       setError("Failed to Sign In");
     }

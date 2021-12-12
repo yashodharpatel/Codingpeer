@@ -30,7 +30,7 @@ export default function PrivateRoute({ component: Component, ...rest }) {
     return (
       <div className="loading-spinner">
         <div className="loading-text">Loading...</div>
-        <div class="spinner-border ml-auto spinner" role="status" aria-hidden="true" />
+        <div class="spinner-grow spinner" role="status" />
       </div>
     );
   }

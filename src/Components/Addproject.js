@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import { useAuth } from "../Contexts/Authcontext";
 import { database } from "../firebase";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function AddProject() {
   const { currentUser } = useAuth();
   const [projectName, setProjectName] = useState("");
   const [projectURL, setProjectURL] = useState("");
   const [projectDesc, setProjectDesc] = useState("");
-  const history = useHistory();
+  const [error, setError] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -20,35 +20,21 @@ export default function AddProject() {
     };
 
     try {
+      setError("");
       await database
         .ref("users")
         .child(currentUser.uid)
         .child("projects")
         .child(projectName)
         .set(projects);
-      // document.getElementsByClassName("modal").removeClass("in");
-      // document.querySelector(".modal-backdrop").remove();
-      // document.querySelector("body").removeClass("modal-open");
-      // document.querySelector("body").css("padding-right", "");
-      // document.querySelector(".modal").hide();
-      // history.push(`/profile/${currentUser.uid}/`);
       alert("Project added successfully");
-    } catch (e) {
-      console.log(e);
+    } catch {
+      setError("Failed to add project!");
     }
   };
 
   return (
     <>
-      {/* <button
-        type="button"
-        className="btn btn-primary w-100"
-        data-bs-toggle="modal"
-        data-bs-target="#addproject"
-      >
-        <i className="fas fa-plus" />
-        &nbsp; Add Project
-      </button> */}
       <Link
         className="btn btn-primary"
         data-bs-toggle="modal"
@@ -65,8 +51,6 @@ export default function AddProject() {
         tabIndex="-1"
         aria-labelledby="addprojectLabel"
         aria-hidden="true"
-        // data-bs-backdrop="static"
-        // data-bs-keyboard="false"
       >
         <div className="modal-dialog modal-lg">
           <div className="modal-content">
@@ -81,6 +65,11 @@ export default function AddProject() {
                 aria-label="Close"
               ></button>
             </div>
+            {error && (
+              <div className="alert alert-danger" role="alert">
+                {error}
+              </div>
+            )}
             <form onSubmit={handleSubmit}>
               <div className="modal-body">
                 <div className="mb-3">

@@ -41,7 +41,7 @@ export default function Forgotpassword() {
                 className="modal-title w-100 text-center"
                 id="forgotpasswordLabel"
               >
-                RESET PASSWORD
+                Reset Password
               </h3>
               <i
                 className="fas fa-times"

@@ -119,7 +119,7 @@ export default function Profiledetails() {
         </div>
       )}
       <div className="editprofile-component-header">
-        <div className="editprofile-component-title">Personal Details</div>
+        <div className="editprofile-component-title">Profile Details</div>
         <div className="editprofile-component-sub-title">
           The Information will appperar on your public Codingpeer profile.
         </div>

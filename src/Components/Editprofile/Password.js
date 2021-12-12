@@ -17,8 +17,6 @@ export default function Password() {
     oldPassword
   );
 
-  // Prompt the user to re-provide their sign-in credentials
-
   const handleChangePassword = (e) => {
     e.preventDefault();
 
@@ -45,10 +43,11 @@ export default function Password() {
             setError("Failed to update account");
           });
       })
-      .catch(function (error) {
+      .catch(function () {
         setError("Old password wrong");
       });
   };
+
   return (
     <div>
       <div className="editprofile-component-header">
@@ -75,6 +74,7 @@ export default function Password() {
             onChange={(e) => {
               setOldPassword(e.target.value);
             }}
+            placeholder="Old Password"
           />
         </div>
         <div className="mb-3">
@@ -89,11 +89,12 @@ export default function Password() {
             onChange={(e) => {
               setNewPassword(e.target.value);
             }}
+            placeholder="New Password"
           />
         </div>
         <div className="mb-3">
           <label htmlFor="email" className="form-label">
-            Retype Password
+            Confirm Password
           </label>
           <input
             type="password"
@@ -103,6 +104,7 @@ export default function Password() {
             onChange={(e) => {
               setConfiredPassword(e.target.value);
             }}
+            placeholder="Confirm Password"
           />
         </div>
         <button type="submit" className="btn btn-primary">

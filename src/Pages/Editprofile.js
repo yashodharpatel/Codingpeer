@@ -21,7 +21,7 @@ export default function Editprofile() {
           <EditprofileNav setComponentToRender={setComponentToRender} />
         </div>
         <div className="editprofile-secondhalf">
-          {componentToRender === "PersonalDetails" ? <Profiledetails /> : ""}
+          {componentToRender === "ProfileDetails" ? <Profiledetails /> : ""}
           {componentToRender === "Preferences" ? <Preferences /> : ""}
           {componentToRender === "Account" ? <Account /> : ""}
           {componentToRender === "Password" ? <Password /> : ""}

@@ -7,8 +7,8 @@ export default function EditprofileNav(props) {
         <ul className="editprofile-nav-links">
           <div className="mb-3">
             <div className="editprofile-nav-title">EDIT PROFILE</div>
-            <li onClick={() => props.setComponentToRender("PersonalDetails")}>
-              Personal details
+            <li onClick={() => props.setComponentToRender("ProfileDetails")}>
+              Profile details
             </li>
             <li onClick={() => props.setComponentToRender("Preferences")}>
               Preferences

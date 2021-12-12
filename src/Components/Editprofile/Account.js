@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useAuth } from "../../Contexts/Authcontext";
 import { auth, database, storage } from "../../firebase";
 
 export default function Account() {
-  const { currentUser, updateEmail, deleteUser } = useAuth();
+  const { currentUser, updateEmail } = useAuth();
   const currentUserId = currentUser.uid;
   const currentUserEmail = currentUser.email;
   const [email, setEmail] = useState(currentUserEmail);
@@ -12,15 +12,6 @@ export default function Account() {
   const [error, setError] = useState("");
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
-
-  const [emailPrivacy, setEmailPrivacy] = useState("");
-
-  useEffect(() => {
-    const user = database.ref("users/" + currentUserId);
-    user.once("value", (snapshot) => {
-      setEmailPrivacy(snapshot.val().Emailprivacy);
-    });
-  }, []);
 
   const handleUpdateEmail = async (e) => {
     e.preventDefault();
@@ -112,7 +103,6 @@ export default function Account() {
               type="checkbox"
               id="EmailPrivacy"
               value="EmailPrivacy"
-              
             />
             <label class="form-check-label" for="EmailPrivacy">
               <div>Keep my Email address private.</div>
