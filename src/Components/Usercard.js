@@ -31,8 +31,8 @@ export default function Usercard(props) {
                   &nbsp;&nbsp;{user.Specialty}
                 </div>
               </div>
-              {/* <div className="user-email">{user.Email}</div>
-              <div className="user-collegeyear">{user.YearOfCollege}</div> */}
+              {/* <div className="user-email">{user.Email}</div> */}
+              {/* <div className="user-collegeyear">{user.YearOfCollege}</div> */}
             </div>
           </div>
           <div className="messagesocial-container">
@@ -42,9 +42,12 @@ export default function Usercard(props) {
               </button>
             </div>
             <div className="user-socials">
-              <i className="fab fa-github" />
-              <i className="fas fa-globe" />
-              <i className="fab fa-facebook" />
+              {user.GitHub ? <i class="fab fa-github" /> : ""}
+              {user.StackOverflow ? <i class="fab fa-stack-overflow" /> : ""}
+              {user.Website ? <i class="fas fa-link" /> : ""}
+              {user.LinkedIn ? <i class="fab fa-linkedin" /> : ""}
+              {user.Twitter ? <i class="fab fa-twitter" /> : ""}
+              {user.Instagram ? <i class="fab fa-instagram" /> : ""}
             </div>
           </div>
         </div>
@@ -55,8 +58,8 @@ export default function Usercard(props) {
               <i class="fas fa-tools"></i> SKILLS
             </div>
             <div className="user-skills">
-              {user.Skills.split(",").map((skill) => (
-                <div className="skill"> {skill}</div>
+              {user.Skills && user.Skills.split(",").map((skill) => (
+                <div className="user-skill"> {skill}</div>
               ))}
             </div>
           </div>
@@ -65,8 +68,8 @@ export default function Usercard(props) {
               <i class="far fa-heart"></i> INTRESTS
             </div>
             <div className="user-intrests">
-              {user.Intrests.map((intrest) => (
-                <div className="skill"> {intrest}</div>
+              {user.Intrests && user.Intrests.map((intrest) => (
+                <div className="user-intrest"> {intrest}</div>
               ))}
             </div>
           </div>

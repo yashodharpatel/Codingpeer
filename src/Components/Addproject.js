@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useAuth } from "../Contexts/Authcontext";
 import { database } from "../firebase";
-import { useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 export default function AddProject() {
   const { currentUser } = useAuth();
@@ -10,7 +10,7 @@ export default function AddProject() {
   const [projectDesc, setProjectDesc] = useState("");
   const history = useHistory();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     const projects = {
@@ -19,16 +19,28 @@ export default function AddProject() {
       projectDesc,
     };
 
-    database
-      .ref("users")
-      .child(currentUser.uid)
-      .child("projects")
-      .push(projects);
+    try {
+      await database
+        .ref("users")
+        .child(currentUser.uid)
+        .child("projects")
+        .child(projectName)
+        .set(projects);
+      // document.getElementsByClassName("modal").removeClass("in");
+      // document.querySelector(".modal-backdrop").remove();
+      // document.querySelector("body").removeClass("modal-open");
+      // document.querySelector("body").css("padding-right", "");
+      // document.querySelector(".modal").hide();
+      // history.push(`/profile/${currentUser.uid}/`);
+      alert("Project added successfully");
+    } catch (e) {
+      console.log(e);
+    }
   };
 
   return (
     <>
-      <button
+      {/* <button
         type="button"
         className="btn btn-primary w-100"
         data-bs-toggle="modal"
@@ -36,7 +48,16 @@ export default function AddProject() {
       >
         <i className="fas fa-plus" />
         &nbsp; Add Project
-      </button>
+      </button> */}
+      <Link
+        className="btn btn-primary"
+        data-bs-toggle="modal"
+        to="#addproject"
+        role="button"
+      >
+        <i className="fas fa-plus" />
+        &nbsp; Add Project
+      </Link>
 
       <div
         className="modal fade"
@@ -44,8 +65,8 @@ export default function AddProject() {
         tabIndex="-1"
         aria-labelledby="addprojectLabel"
         aria-hidden="true"
-        data-bs-backdrop="static"
-        data-bs-keyboard="false"
+        // data-bs-backdrop="static"
+        // data-bs-keyboard="false"
       >
         <div className="modal-dialog modal-lg">
           <div className="modal-content">
@@ -60,7 +81,7 @@ export default function AddProject() {
                 aria-label="Close"
               ></button>
             </div>
-            <form onClick={handleSubmit}>
+            <form onSubmit={handleSubmit}>
               <div className="modal-body">
                 <div className="mb-3">
                   <label htmlFor="projectname" className="form-label">

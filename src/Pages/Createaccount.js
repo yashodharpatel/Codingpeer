@@ -11,7 +11,7 @@ export default function Createaccount() {
             We'll use this to connect you with developers and more.
           </div>
         </div>
-        <div className="create-account-form">
+        <div className="create-account-form set-width-1000">
           <CreateaccountForm />
         </div>
       </div>

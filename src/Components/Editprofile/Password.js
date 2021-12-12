@@ -52,10 +52,10 @@ export default function Password() {
   return (
     <div>
       <div className="editprofile-component-header">
-        <div className="editprofile-component-title">Account</div>
-        {/* <div className="editprofile-component-sub-title">
-          The Information will appperar on your public Codingpeer profile.
-        </div> */}
+        <div className="editprofile-component-title">Change your password</div>
+        <div className="editprofile-component-sub-title">
+          Password must be 6+ characters.
+        </div>
       </div>
       {error && (
         <div className="alert alert-danger" role="alert">
@@ -111,7 +111,7 @@ export default function Password() {
         <Link
           to={"/user/" + currentUser.uid}
           type="button"
-          class="btn btn-secondary mx-2"
+          class="btn btn-secondary mx-1"
         >
           Cancel
         </Link>

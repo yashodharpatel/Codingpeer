@@ -27,7 +27,12 @@ export default function PrivateRoute({ component: Component, ...rest }) {
   }, []);
 
   if (state === "loading") {
-    return <div>Loading...</div>;
+    return (
+      <div className="loading-spinner">
+        <div className="loading-text">Loading...</div>
+        <div class="spinner-border ml-auto spinner" role="status" aria-hidden="true" />
+      </div>
+    );
   }
 
   return (

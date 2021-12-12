@@ -31,16 +31,6 @@ export default function CreateaccountForm() {
   const [loading, setLoading] = useState(false);
   const history = useHistory();
 
-  // const imagePreview = (e) => {
-  //   const reader = new FileReader();
-  //   reader.onload = () => {
-  //     if (reader.readyState === 2) {
-  //       setImage(reader.result);
-  //     }
-  //   };
-  //   reader.readAsDataURL(e.target.files[0]);
-  // };
-
   const handleSpecialty = (e) => {
     const { value } = e.target;
     setSpecialty(value);
@@ -124,19 +114,6 @@ export default function CreateaccountForm() {
       <form onSubmit={createAccount}>
         <div className="field">
           <div className="field-title">Personal Details</div>
-          {/* <div className="mb-3 profile-pic">
-              <input
-                type="file"
-                accept="image/*"
-                className="form-control"
-                id="image"
-                onChange={imagePreview}
-                style={{ display: "none" }}
-              />
-              <label htmlFor="image">
-                <img src={image} alt="profilepic" className="profile-image" />
-              </label>
-            </div> */}
           <div className="change-display">
             <div className="mb-3">
               <label htmlFor="firstname" className="form-label">

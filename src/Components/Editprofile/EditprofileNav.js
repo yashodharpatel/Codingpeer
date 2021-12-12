@@ -3,7 +3,7 @@ import React from "react";
 export default function EditprofileNav(props) {
   return (
     <>
-      <nav>
+      <div>
         <ul className="editprofile-nav-links">
           <div className="mb-3">
             <div className="editprofile-nav-title">EDIT PROFILE</div>
@@ -24,7 +24,7 @@ export default function EditprofileNav(props) {
             </li>
           </div>
         </ul>
-      </nav>
+      </div>
     </>
   );
 }

@@ -19,6 +19,10 @@ export default function Login() {
       await login(emailRef.current.value, passwordRef.current.value);
       history.push("/dashboard/");
       document.querySelector(".modal-backdrop").remove();
+      // document.querySelector(".modal").removeClass("in");
+      // document.querySelector("body").removeClass("modal-open");
+      // document.querySelector("body").css("padding-right", "");
+      // document.querySelector(".modal").hide();
     } catch {
       setError("Failed to Sign In");
     }
@@ -29,7 +33,7 @@ export default function Login() {
   return (
     <>
       <Link
-        className="btn btn-primary btn-lg"
+        className="btn btn-primary btn-lg login-btn"
         data-bs-toggle="modal"
         to="#login"
         role="button"
@@ -81,7 +85,10 @@ export default function Login() {
                   </div>
                 </div>
                 <div className="mb-3">
-                  <label htmlFor="password" className="form-label auth-formlabel">
+                  <label
+                    htmlFor="password"
+                    className="form-label auth-formlabel"
+                  >
                     Password
                   </label>
                   <div className="input-box">

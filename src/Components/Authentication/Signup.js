@@ -46,7 +46,7 @@ export default function Signup() {
         Create an account
       </button> */}
       <Link
-        className="btn btn-lg"
+        className="btn btn-primary btn-lg"
         data-bs-toggle="modal"
         to="#signup"
         role="button"
