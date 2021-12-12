@@ -55,7 +55,7 @@ export default function Dashboard() {
                   return user;
                 } else if (
                   Object.values(user)
-                    .splice(0, 2)
+                    // .splice(0, 2)
                     .join(" ")
                     .toLowerCase()
                     .includes(search.toLowerCase())
