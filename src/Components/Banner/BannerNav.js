@@ -13,6 +13,11 @@ export default function BannerNav() {
               coding<span style={{ color: "black" }}>peer</span>
             </Link>
           </div>
+          <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
           <ul className="nav-links">
             <li>Support</li>
             <li>Learn</li>
