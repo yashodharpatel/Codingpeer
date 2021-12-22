@@ -85,7 +85,7 @@ export default function Forgotpassword() {
                 <button
                   disabled={loading}
                   type="submit"
-                  className="btn btn-primary btn-lg w-100"
+                  className="btn btn-lg w-100"
                 >
                   Reset Password
                 </button>

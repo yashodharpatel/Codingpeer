@@ -20,27 +20,37 @@ export default function App() {
   const { currentUser } = useAuth();
 
   return (
-    <Router>
-      <Switch>
-        <Route exact path="/" component={Home} />
-        {currentUser ? (
-          <Switch>
-            <Route exact path="/create-account" component={Createaccount} />
-            <PrivateRoute exact path="/dashboard/" component={Dashboard} />
-            <PrivateRoute exact path="/messages/" component={Messages} />
-            <PrivateRoute
-              exact
-              path="/notifications/"
-              component={Notifications}
-            />
-            <PrivateRoute exact path="/profile/:userId/" component={Profile} />
-            <PrivateRoute exact path="/edit-profile/" component={Editprofile} />
-          </Switch>
-        ) : (
-          <Redirect to="/" />
-        )}
-        <Route component={PageNotFound} />
-      </Switch>
-    </Router>
+    <div style={{ overflow: "hidden" }}>
+      <Router>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          {currentUser ? (
+            <Switch>
+              <Route exact path="/create-account" component={Createaccount} />
+              <PrivateRoute exact path="/dashboard/" component={Dashboard} />
+              <PrivateRoute exact path="/messages/" component={Messages} />
+              <PrivateRoute
+                exact
+                path="/notifications/"
+                component={Notifications}
+              />
+              <PrivateRoute
+                exact
+                path="/profile/:userId/"
+                component={Profile}
+              />
+              <PrivateRoute
+                exact
+                path="/edit-profile/"
+                component={Editprofile}
+              />
+            </Switch>
+          ) : (
+            <Redirect to="/" />
+          )}
+          <Route component={PageNotFound} />
+        </Switch>
+      </Router>
+    </div>
   );
 }

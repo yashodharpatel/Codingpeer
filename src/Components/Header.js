@@ -21,15 +21,19 @@ export default function Header() {
 
   return (
     <>
-      <div className="nav" id="nav">
+      <div className="nav header-nav" id="nav">
         <div className="set-width-1200">
-          <div className="inside-nav">
+          <div className="inside-nav header-insidenav">
             <div className="logo">
-              <Link to="/dashboard/" className="remove-td">
+              <Link
+                to="/dashboard/"
+                className="remove-td"
+                style={{ color: "#048dbb" }}
+              >
                 coding<span style={{ color: "rgb(93, 93, 93)" }}>peer</span>
               </Link>
             </div>
-            <ul className="nav-links">
+            <ul className="nav-links header-navlinks">
               <li>
                 <Link to="/dashboard/" className="remove-td">
                   <i className="fas fa-home nav-icon" />

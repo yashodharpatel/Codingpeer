@@ -6,7 +6,7 @@ export default function Createaccount() {
     <>
       <div className="create-account">
         <div className="create-account-title">
-          <div className="title">Create Account</div>
+          <div className="title">Create Profile</div>
           <div className="sub-title">
             We'll use this to connect you with developers and more.
           </div>

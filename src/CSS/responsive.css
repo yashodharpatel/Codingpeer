@@ -1,0 +1,464 @@
+@media only screen and (max-width: 1300px) {
+  .banner {
+    flex-direction: column;
+    height: auto;
+    padding: 6% 5%;
+  }
+
+  .intro-section,
+  .background {
+    width: 100%;
+  }
+
+  .intro-section .main-intro-text {
+    font-size: 300%;
+  }
+
+  .bannerImage {
+    width: 700px;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .profile-first-section {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 20px;
+  }
+
+  .userprofile-imagename-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .userprofile-details {
+    margin: 0px;
+  }
+
+  .userprofile-socials {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 20px;
+  }
+
+  .userprofile-social-link {
+    display: none;
+  }
+
+  .userprofile-socials i {
+    font-size: 24px;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  /* .banner-nav {
+    position: fixed;
+    width: 100%;
+  } 
+
+  .banner {
+    margin-top: 74px;
+  } */
+
+  .inside-nav {
+    padding: 0px 6px;
+  }
+
+  .banner-navlinks li {
+    padding: 0px;
+    margin-bottom: 50px;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .signup-btn {
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+  }
+
+  .banner-navlinks {
+    flex-direction: column;
+    width: 100%;
+    height: calc(100vh - 72px);
+    background-color: white;
+    position: absolute;
+    top: 72px;
+    left: 0;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .banner-navlinks.close {
+    left: -100%;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .bannerImage {
+    width: 500px;
+  }
+
+  .intro-section .main-intro-text {
+    font-size: 250%;
+  }
+
+  .intro-section .sub-intro-text {
+    font-size: 115%;
+  }
+
+  .change-display {
+    flex-direction: column;
+    grid-gap: 0px;
+  }
+
+  .change-display > * {
+    width: 100%;
+  }
+
+  .namespecialty-container {
+    flex-direction: column;
+  }
+
+  .user-specialty {
+    margin: 6px 14px 0px 22px;
+  }
+
+  .card-secondhalf {
+    flex-direction: column;
+    grid-gap: 20px;
+  }
+
+  .card-secondhalf > * {
+    width: 100%;
+  }
+
+  .editprofile-display {
+    flex-direction: column;
+    padding: 30px 10px;
+    grid-gap: 30px;
+  }
+
+  .editprofile-title {
+    padding: 30px 10px;
+    font-size: 28px;
+  }
+
+  .editprofile-component-header {
+    padding-bottom: 30px;
+    margin-bottom: 22px;
+  }
+
+  .editprofile-component-title {
+    font-size: 28px;
+  }
+
+  .editprofile-component-sub-title {
+    font-size: 14px;
+  }
+
+  .field {
+    padding: 10px 0px;
+  }
+
+  .field-title {
+    font-size: 21px;
+    margin-bottom: 14px;
+  }
+
+  .social-title {
+    font-size: 17px;
+    margin-bottom: 14px;
+  }
+
+  .editprofile-firsthalf {
+    width: 100%;
+    padding: 0px;
+  }
+
+  .editprofile-secondhalf {
+    border: none;
+    padding: 0px;
+    width: 100%;
+  }
+
+  .user-profile {
+    padding: 24px 0px;
+  }
+
+  .userprofile-profilepic {
+    width: 170px;
+    height: 170px;
+  }
+
+  .userprofile-name {
+    font-size: 38px;
+  }
+
+  .userprofile-specialty {
+    font-size: 24px;
+  }
+
+  .profile-first-section {
+    padding: 24px;
+  }
+
+  .userprofile-section {
+    padding: 24px 0px;
+  }
+
+  .userprofile-skills,
+  .userprofile-intrests,
+  .projects,
+  .addproject-btn {
+    padding: 0px 24px;
+  }
+
+  .userprofile-section-titles {
+    padding: 6px 24px;
+    font-size: 22px;
+  }
+
+  .userprofile-skill,
+  .userprofile-intrest {
+    padding: 4px 10px;
+    margin: 0px 8px 8px 0px;
+    font-size: 18px;
+  }
+
+  .userprofile-projectName {
+    font-size: 20px;
+  }
+
+  .userprofile-projectURL,
+  .userprofile-projectDesc {
+    font-size: 17px;
+  }
+
+  .footer {
+    padding: 25px 0px;
+  }
+
+  .footer-firsthalf {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    grid-gap: 10px;
+  }
+
+  .footer-logo-img {
+    height: 52px;
+  }
+
+  .footer-logo-name {
+    font-size: 24px;
+  }
+
+  .footer-sub-logo-name {
+    font-size: 14px;
+  }
+
+  .footer-titles {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  .footer-mail {
+    font-size: 18px;
+  }
+
+  .footer-socials {
+    font-size: 18px;
+    grid-gap: 28px;
+  }
+
+  .create-account-form {
+    padding: 16px;
+    padding-bottom: 32px;
+  }
+
+  .create-account-title .title {
+    margin-bottom: 14px;
+  }
+
+  .create-account {
+    padding-bottom: 58px;
+  }
+
+  .create-account-title {
+    padding: 58px 20px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .header-nav {
+    height: 60px;
+    /* background-color: #244360; */
+  }
+
+  .header-navlinks {
+    z-index: 100;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 60px;
+    background-color: white;
+    justify-content: space-evenly;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 15%);
+    border-top: 2px solid rgba(0, 0, 0, 0.125);
+  }
+
+  .header-navlinks li {
+    padding: 0px;
+  }
+
+  .dropdown-menu li {
+    padding: 0px 10px;
+  }
+
+  .header-insidenav {
+    justify-content: center;
+  }
+
+  .dashboard,
+  .user-profilepage,
+  .editprofile-display {
+    margin-bottom: 60px;
+  }
+
+  .user-profilepage {
+    padding: 40px 0px;
+  }
+
+  .footer-display {
+    display: none;
+  }
+
+  .intro-section .main-intro-text {
+    font-size: 190%;
+  }
+
+  .intro-section .sub-intro-text {
+    font-size: 105%;
+  }
+
+  .bannerImage {
+    width: 300px;
+  }
+
+  .change-card-display {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .user-name {
+    margin: 0px;
+  }
+
+  .user-specialty {
+    margin: 6px 0px 14px 0px;
+  }
+
+  .message-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 1rem;
+  }
+
+  .messagesocial-container {
+    align-items: flex-start;
+  }
+
+  .user-socials > * {
+    margin: 0px 10px 0px 0px;
+  }
+
+  .profile-first-section {
+    align-items: center;
+  }
+
+  .userprofile-imagename-container {
+    align-items: center;
+  }
+
+  .user-profile {
+    padding: 24px 0px;
+  }
+
+  .userprofile-profilepic {
+    width: 120px;
+    height: 120px;
+  }
+
+  .userprofile-name {
+    font-size: 30px;
+  }
+
+  .userprofile-specialty,
+  .userprofile-socials i {
+    font-size: 19px;
+  }
+
+  .profile-first-section {
+    padding: 16px 14px;
+  }
+
+  .userprofile-section {
+    padding: 16px 0px;
+  }
+
+  .userprofile-skills,
+  .userprofile-intrests,
+  .projects,
+  .addproject-btn {
+    padding: 0px 14px;
+  }
+
+  .userprofile-section-titles {
+    padding: 2px 14px;
+    font-size: 18px;
+    border-width: 1px;
+  }
+
+  .userprofile-skill,
+  .userprofile-intrest {
+    margin: 0px 6px 6px 0px;
+    font-size: 14px;
+  }
+
+  .userprofile-projectName {
+    font-size: 16px;
+  }
+
+  .userprofile-projectURL,
+  .userprofile-projectDesc {
+    font-size: 14px;
+  }
+
+  .footer {
+    padding: 14px 0px;
+  }
+
+  .footer-firsthalf {
+    grid-gap: 8px;
+  }
+
+  .footer-logo-img {
+    height: 48px;
+  }
+
+  .footer-logo-name {
+    font-size: 22px;
+  }
+
+  .footer-sub-logo-name {
+    font-size: 12px;
+  }
+}

@@ -4,7 +4,7 @@ import { AuthProvider } from "./Contexts/Authcontext";
 import App from "./App";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./CSS/style.css";
-import "./CSS/responsiveness.css";
+import "./CSS/responsive.css";
 
 ReactDOM.render(
   <React.StrictMode>

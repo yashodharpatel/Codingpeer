@@ -28,14 +28,14 @@ export default function Login() {
 
   return (
     <>
-      <Link
-        className="btn btn-primary btn-lg login-btn"
+      <button
+        type="button"
+        className="btn login-btn"
         data-bs-toggle="modal"
-        to="#login"
-        role="button"
+        data-bs-target="#login"
       >
-        Log in
-      </Link>
+        Log In
+      </button>
 
       <div
         className="modal fade"
@@ -103,7 +103,7 @@ export default function Login() {
                 <button
                   disabled={loading}
                   type="submit"
-                  className="btn btn-lg btn-primary w-100 mt-3"
+                  className="btn btn-lg w-100 mt-3"
                   id="loginbutton"
                 >
                   Log In

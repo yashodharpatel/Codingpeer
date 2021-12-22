@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useAuth } from "../Contexts/Authcontext";
+import { Link } from "react-router-dom";
 import { database } from "../firebase";
-import { Link, useHistory } from "react-router-dom";
 import Header from "../Components/Header";
 import Addproject from "../Components/Addproject";
 import Footer from "../Components/Footer";
@@ -11,8 +11,7 @@ export default function Profile(props) {
   const currentUserId = currentUser.uid;
   const userId = props.match.params.userId;
   const [user, setUser] = useState([]);
-  const [error, setError] = useState("");
-  const history = useHistory();
+  // const [error, setError] = useState("");
 
   useEffect(() => {
     const user = database.ref("users/" + userId);
@@ -28,7 +27,7 @@ export default function Profile(props) {
         <div className="card user-profile set-width-1200">
           <div className="card-body">
             <div className="change-card-display profile-first-section">
-              <div className="change-card-display">
+              <div className="change-card-display userprofile-imagename-container">
                 <div>
                   <img
                     src={user.ProfilePicture}
@@ -44,33 +43,9 @@ export default function Profile(props) {
                     <i class="fas fa-envelope" />
                     <Link>{user.Email}</Link>
                   </div> */}
-                  <div className="userprofile-specialty">
-                    {/* <i class="fas fa-tag" /> */}
-                    {user.Specialty}
-                  </div>
-                  {/* <div className="userprofile-city">
-                    <i class="fas fa-map-marker-alt" /> {user.City}
-                  </div> */}
+                  <div className="userprofile-specialty">{user.Specialty}</div>
                 </div>
               </div>
-              {/* <div className="editprofile-message-container">
-                {userId === currentUserId ? (
-                  <div>
-                    <div>
-                      <Link to="/edit-profile" className="btn btn-primary">
-                        Edit Profile & Settings
-                      </Link>
-                    </div>
-                    <div className="mt-2">
-                      <Addproject />
-                    </div>
-                  </div>
-                ) : (
-                  <Link to="/messages" className="btn btn-primary">
-                    Message
-                  </Link>
-                )}
-              </div> */}
 
               <div className="userprofile-socials">
                 {user.Email && (
@@ -194,7 +169,9 @@ export default function Profile(props) {
           </div>
         </div>
       </div>
-      <Footer />
+      <div className="footer-display">
+        <Footer />
+      </div>
     </>
   );
 }

@@ -686,7 +686,7 @@ export default function CreateaccountForm() {
         <button
           disabled={loading}
           type="submit"
-          className="btn btn-primary btn-lg submitbtn"
+          className="btn submitbtn"
         >
           Submit
         </button>

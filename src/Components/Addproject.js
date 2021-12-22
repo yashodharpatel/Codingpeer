@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useAuth } from "../Contexts/Authcontext";
 import { database } from "../firebase";
-import { Link } from "react-router-dom";
 
 export default function AddProject() {
   const { currentUser } = useAuth();
@@ -35,15 +34,15 @@ export default function AddProject() {
 
   return (
     <>
-      <Link
-        className="btn btn-primary"
+      <button
+        type="button"
+        className="btn"
         data-bs-toggle="modal"
-        to="#addproject"
-        role="button"
+        data-bs-target="#addproject"
       >
         <i className="fas fa-plus" />
         &nbsp; Add Project
-      </Link>
+      </button>
 
       <div
         className="modal fade"
@@ -122,7 +121,7 @@ export default function AddProject() {
                 </div>
               </div>
               <div className="modal-footer">
-                <button type="submit" className="btn btn-primary">
+                <button type="submit" className="btn">
                   Save
                 </button>
               </div>

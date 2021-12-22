@@ -119,7 +119,7 @@ export default function Account() {
             <button
               disabled={loading}
               type="submit"
-              className="btn btn-primary"
+              className="btn"
             >
               Save Changes
             </button>

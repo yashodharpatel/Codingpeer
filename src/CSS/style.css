@@ -26,9 +26,10 @@ body {
   box-shadow: 0 1px 3px 0 rgb(0 0 0 / 15%);
   background-color: white;
   margin-bottom: 2px;
-  z-index: 10;
+  /* z-index: 10; */
 
   /* position: relative; */
+  /* overflow: hidden; */
 }
 
 .set-width-1000 {
@@ -52,11 +53,6 @@ body {
 .logo {
   font-size: 28px;
   font-weight: bold;
-  color: #048dbb;
-}
-
-.login-btn {
-  margin-left: 40px;
 }
 
 .inside-nav {
@@ -65,15 +61,31 @@ body {
   justify-content: space-between;
 }
 
-/* .logo {
-  font-size: 25px;
-} */
+.fas {
+  cursor: pointer;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 24px;
+  width: 32px;
+}
+
+.menu-icon .fa-times {
+  transform: rotate(360deg);
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-icon .fa-bars {
+  transform: rotate(180deg);
+  transition: all 0.3s ease-in-out;
+}
 
 .nav-links {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
+  /* height: 100%; */
   margin: 0;
   padding: 0;
 }
@@ -81,6 +93,13 @@ body {
 .nav-links li {
   list-style: none;
   font-size: 19px;
+}
+
+.banner-navlinks li {
+  padding: 0px 20px;
+}
+
+.header-navlinks li {
   padding-left: 40px;
 }
 
@@ -121,6 +140,12 @@ body {
   color: rgb(93, 93, 93);
 }
 
+.signup-btn {
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  border-radius: 0.3rem;
+}
+
 /*Banner*/
 .banner {
   display: flex;
@@ -158,6 +183,10 @@ body {
   margin: 0px 0px 30px 0px;
 }
 
+.bannerImage {
+  width: 800px;
+}
+
 /*Modal*/
 .modal-header {
   border-bottom: none;
@@ -179,7 +208,7 @@ body {
 }
 
 .input-box:focus-within {
-  border-color: #048dbb;;
+  border-color: #048dbb;
   outline: 0;
   -webkit-box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%),
     0 0 8px rgb(121 88 159 / 60%);
@@ -229,15 +258,43 @@ body {
   box-shadow: none;
 }
 
-.btn-primary {
+.btn {
   background-color: #048dbb;
   color: white;
   border: none;
 }
 
-.btn-primary:hover {
+.btn:hover {
   background-color: #047ea7;
   color: white;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+}
+
+.btn-secondary:hover {
+  background-color: #5c636a;
+}
+
+.btn-outline-danger {
+  color: #dc3545;
+  border: 1px solid #dc3545;
+  background-color: transparent;
+}
+
+.btn-outline-danger:hover {
+  background-color: #dc3545;
+}
+
+.login-btn {
+  color: #048dbb;
+  border: 1px solid #048dbb;
+  background-color: transparent;
+}
+
+.login-btn:hover {
+  background-color: #048dbb;
 }
 
 .dashboard {
@@ -260,7 +317,7 @@ body {
   /* text-transform: uppercase; */
   font-size: 36px;
   line-height: 45px;
-  
+
   margin-bottom: 21px;
   color: #ffffff;
 }
@@ -311,12 +368,6 @@ body {
 .social-title {
   font-size: 18px;
   margin-bottom: 16px;
-}
-
-.addprojectbtn {
-  border-radius: 20px;
-  padding: 10px 25px;
-  font-weight: bold;
 }
 
 .submitbtn {
@@ -577,6 +628,10 @@ body {
 
 .accordion-button:focus {
   box-shadow: none;
+}
+
+.editprofile-display {
+  display: flex;
 }
 
 .editprofile-nav-links {

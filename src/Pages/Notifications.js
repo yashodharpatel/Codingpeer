@@ -7,7 +7,9 @@ export default function Notifications() {
     <>
       <Header />
       <div>Notifications</div>
-      <Footer />
+      <div className="footer-display">
+        <Footer />
+      </div>
     </>
   );
 }

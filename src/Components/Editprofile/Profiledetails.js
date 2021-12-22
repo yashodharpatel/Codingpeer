@@ -410,13 +410,13 @@ export default function Profiledetails() {
           </div>
         </div>
 
-        <button disabled={loading} type="submit" className="btn btn-primary">
+        <button disabled={loading} type="submit" className="btn">
           Save Changes
         </button>
         <Link
           to={"/profile/" + currentUserId + "/"}
           type="button"
-          class="btn btn-secondary mx-2"
+          class="btn btn-secondary mx-1"
         >
           Cancel
         </Link>

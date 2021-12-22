@@ -107,7 +107,7 @@ export default function Password() {
             placeholder="Confirm Password"
           />
         </div>
-        <button type="submit" className="btn btn-primary">
+        <button type="submit" className="btn">
           Save Changes
         </button>
         <Link

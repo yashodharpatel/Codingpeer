@@ -7,7 +7,9 @@ export default function Messages() {
     <>
       <Header />
       <div>Messages</div>
-      <Footer />
+      <div className="footer-display">
+        <Footer />
+      </div>
     </>
   );
 }

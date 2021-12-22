@@ -9,7 +9,7 @@ export default function Dashboard() {
   const { currentUser } = useAuth();
   const [userList, setUserList] = useState([]);
   const [search, setSearch] = useState("");
-  const [error, setError] = useState("");
+  // const [error, setError] = useState("");
   const uid = currentUser.uid;
 
   useEffect(() => {
@@ -29,11 +29,11 @@ export default function Dashboard() {
 
   return (
     <>
-      {error && (
+      {/* {error && (
         <div className="alert alert-danger" role="alert">
           {error}
         </div>
-      )}
+      )} */}
       <Header />
       <div className="dashboard">
         <div className="form-control d-flex align-items-center set-width-1000">
@@ -74,7 +74,9 @@ export default function Dashboard() {
               )
           : ""}
       </div>
-      <Footer />
+      <div className="footer-display">
+        <Footer />
+      </div>
     </>
   );
 }

@@ -37,22 +37,22 @@ export default function Signup() {
 
   return (
     <>
-      {/* <button
+      <button
         type="button"
-        className="btn btn-primary"
+        className="btn signup-btn"
         data-bs-toggle="modal"
         data-bs-target="#signup"
       >
-        Create an account
-      </button> */}
-      <Link
-        className="btn btn-primary btn-lg"
+        Create Account
+      </button>
+      {/* <Link
+        className="btn"
         data-bs-toggle="modal"
         to="#signup"
         role="button"
       >
         Create Account
-      </Link>
+      </Link> */}
 
       <div
         className="modal fade"
@@ -138,7 +138,7 @@ export default function Signup() {
                 <button
                   disabled={loading}
                   type="submit"
-                  className="btn btn-primary btn-lg w-100"
+                  className="btn btn-lg w-100"
                 >
                   Create Account
                 </button>

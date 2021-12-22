@@ -8,7 +8,7 @@ import Password from "../Components/Editprofile/Password";
 import Footer from "../Components/Footer";
 
 export default function Editprofile() {
-  const [componentToRender, setComponentToRender] = useState("PersonalDetails");
+  const [componentToRender, setComponentToRender] = useState("ProfileDetails");
 
   return (
     <div>
@@ -16,7 +16,7 @@ export default function Editprofile() {
       <div className="editprofile-title">
         <div className="set-width-1200">Edit your profile</div>
       </div>
-      <div className="change-card-display set-width-1200">
+      <div className="set-width-1200 editprofile-display">
         <div className="editprofile-firsthalf">
           <EditprofileNav setComponentToRender={setComponentToRender} />
         </div>
@@ -27,7 +27,9 @@ export default function Editprofile() {
           {componentToRender === "Password" ? <Password /> : ""}
         </div>
       </div>
-      <Footer />
+      <div className="footer-display">
+        <Footer />
+      </div>
     </div>
   );
 }

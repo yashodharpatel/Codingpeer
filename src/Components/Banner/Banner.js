@@ -19,7 +19,7 @@ export default function Banner() {
         <Signup />
       </div>
       <div className="background">
-        <img src={Background} alt="background" width="800px" />
+        <img src={Background} alt="background" className="bannerImage"/>
       </div>
     </div>
   );

@@ -19,7 +19,7 @@ export default function Usercard(props) {
               </Link>
             </div>
             <div>
-              <div className="change-card-display">
+              <div className="change-card-display namespecialty-container">
                 <Link
                   to={"/profile/" + user.UserId + "/"}
                   className="user-name"
@@ -32,12 +32,11 @@ export default function Usercard(props) {
                 </div>
               </div>
               {/* <div className="user-email">{user.Email}</div> */}
-              {/* <div className="user-collegeyear">{user.YearOfCollege}</div> */}
             </div>
           </div>
           <div className="messagesocial-container">
             <div>
-              <button className="btn btn-primary btn-sm message-btn">
+              <button className="btn btn-sm message-btn">
                 Message
               </button>
             </div>
