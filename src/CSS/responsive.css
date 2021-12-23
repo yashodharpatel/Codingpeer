@@ -70,7 +70,7 @@
 
   .banner-navlinks li {
     padding: 0px;
-    margin-bottom: 50px;
+    padding: 15px 0px;
   }
 
   .menu-icon {
@@ -86,12 +86,15 @@
   .banner-navlinks {
     flex-direction: column;
     width: 100%;
-    height: calc(100vh - 72px);
+    /* height: calc(100vh - 72px); */
     background-color: white;
     position: absolute;
-    top: 72px;
+    top: 74px;
     left: 0;
     transition: all 0.5s ease-in-out;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 15%);
+    margin-bottom: 2px;
+    padding: 15px 0px;
   }
 
   .banner-navlinks.close {
