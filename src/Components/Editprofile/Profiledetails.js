@@ -416,7 +416,7 @@ export default function Profiledetails() {
         <Link
           to={"/profile/" + currentUserId + "/"}
           type="button"
-          class="btn btn-secondary mx-1"
+          className="btn btn-secondary mx-1"
         >
           Cancel
         </Link>

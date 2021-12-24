@@ -66,7 +66,7 @@ export default function Header() {
                     className="nav-profile-pic"
                   />
                   <div className="nav-text">
-                    Me <i class="fas fa-caret-down" />
+                    Me <i className="fas fa-caret-down" />
                   </div>
                 </div>
                 <ul className="dropdown-menu" aria-labelledby="profile">

@@ -40,7 +40,7 @@ export default function Profile(props) {
                     {user.FirstName} {user.LastName}
                   </div>
                   {/* <div className="user-email userprofile-email">
-                    <i class="fas fa-envelope" />
+                    <i className="fas fa-envelope" />
                     <Link>{user.Email}</Link>
                   </div> */}
                   <div className="userprofile-specialty">{user.Specialty}</div>
@@ -50,64 +50,64 @@ export default function Profile(props) {
               <div className="userprofile-socials">
                 {user.Email && (
                   <div>
-                    <Link className="userprofile-social-link">
+                    <Link to="#" className="userprofile-social-link">
                       {user.Email}
                     </Link>
-                    <i class="fas fa-envelope" />
+                    <i className="fas fa-envelope" />
                   </div>
                 )}
                 {user.City && (
                   <div>
                     <span className="userprofile-social-link">{user.City}</span>
-                    <i class="fas fa-map-marker-alt" />
+                    <i className="fas fa-map-marker-alt" />
                   </div>
                 )}
                 {user.GitHub && (
                   <div>
-                    <Link className="userprofile-social-link">
+                    <Link to="#" className="userprofile-social-link">
                       {user.GitHub.replace("https://", "")}
                     </Link>
-                    <i class="fab fa-github" />
+                    <i className="fab fa-github" />
                   </div>
                 )}
                 {user.StackOverflow && (
                   <div>
-                    <Link className="userprofile-social-link">
+                    <Link to="#" className="userprofile-social-link">
                       {user.StackOverflow.replace("https://", "")}
                     </Link>
-                    <i class="fab fa-stack-overflow" />
+                    <i className="fab fa-stack-overflow" />
                   </div>
                 )}
                 {user.Website && (
                   <div>
-                    <Link className="userprofile-social-link">
+                    <Link to="#" className="userprofile-social-link">
                       {user.Website.replace("https://", "")}
                     </Link>
-                    <i class="fas fa-link" />
+                    <i className="fas fa-link" />
                   </div>
                 )}
                 {user.LinkedIn && (
                   <div>
-                    <Link className="userprofile-social-link">
+                    <Link to="#" className="userprofile-social-link">
                       {user.LinkedIn.replace("https://www.", "")}
                     </Link>
-                    <i class="fab fa-linkedin" />
+                    <i className="fab fa-linkedin" />
                   </div>
                 )}
                 {user.Twitter && (
                   <div>
-                    <Link className="userprofile-social-link">
+                    <Link to="#" className="userprofile-social-link">
                       {user.Twitter.replace("https://", "")}
                     </Link>
-                    <i class="fab fa-twitter" />
+                    <i className="fab fa-twitter" />
                   </div>
                 )}
                 {user.Instagram && (
                   <div>
-                    <Link className="userprofile-social-link">
+                    <Link to="#" className="userprofile-social-link">
                       {user.Instagram.replace("https://www.", "")}
                     </Link>
-                    <i class="fab fa-instagram" />
+                    <i className="fab fa-instagram" />
                   </div>
                 )}
               </div>
@@ -149,7 +149,7 @@ export default function Profile(props) {
                         <ul>
                           {project.projectURL && (
                             <li className="userprofile-projectURL">
-                              <Link>{project.projectURL}</Link>
+                              <Link to="#">{project.projectURL}</Link>
                             </li>
                           )}
                           {project.projectDesc && (

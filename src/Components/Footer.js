@@ -22,17 +22,17 @@ export default function Footer() {
             <div className="field">
               <div className="footer-titles">Contact us</div>
               <div>
-                <Link className="footer-mail">codingpeer@gmail.com</Link>
+                <Link to="#" className="footer-mail">codingpeer@gmail.com</Link>
               </div>
             </div>
             <div className="field">
               <div className="footer-titles">Find us on:</div>
               <div className="footer-socials">
-                <i class="fab fa-twitter" />
-                <i class="fab fa-instagram" />
-                <i class="fab fa-linkedin" />
-                <i class="fab fa-facebook" />
-                <i class="fab fa-youtube" />
+                <i className="fab fa-twitter" />
+                <i className="fab fa-instagram" />
+                <i className="fab fa-linkedin" />
+                <i className="fab fa-facebook" />
+                <i className="fab fa-youtube" />
               </div>
             </div>
           </div>

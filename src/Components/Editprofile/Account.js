@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { useAuth } from "../../Contexts/Authcontext";
 import { auth, database, storage } from "../../firebase";
 
@@ -12,6 +12,7 @@ export default function Account() {
   const [error, setError] = useState("");
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
+  const history = useHistory();
 
   const handleUpdateEmail = async (e) => {
     e.preventDefault();
@@ -32,23 +33,23 @@ export default function Account() {
   };
 
   const deleteAccount = async () => {
-    const deleteAccount = confirm("Are you sure you want to delete account?");
+    // const deleteAccount = confirm("Are you sure you want to delete account?");
 
-    if (deleteAccount) {
-      try {
-        setLoading(true);
-        setMessage("");
-        setError("Deleting Account..");
-        await database.ref("users/" + currentUserId).remove();
-        await storage.ref(`/profile-pictures/${currentUserId}`).delete();
-        await auth.currentUser.delete();
-        setError("");
-        alert("Account deleted Successfully!");
-        history.push("/");
-      } catch {
-        setError("Failed to delete account");
-      }
+    // if (deleteAccount) {
+    try {
+      setLoading(true);
+      setMessage("");
+      setError("Deleting Account..");
+      await database.ref("users/" + currentUserId).remove();
+      await storage.ref(`/profile-pictures/${currentUserId}`).delete();
+      await auth.currentUser.delete();
+      setError("");
+      alert("Account deleted Successfully!");
+      history.push("/");
+    } catch {
+      setError("Failed to delete account");
     }
+    // }
     setLoading(false);
   };
 
@@ -97,14 +98,14 @@ export default function Account() {
         </div>
 
         <div className="mb-3">
-          <div class="form-check">
+          <div className="form-check">
             <input
-              class="form-check-input"
+              className="form-check-input"
               type="checkbox"
               id="EmailPrivacy"
               value="EmailPrivacy"
             />
-            <label class="form-check-label" for="EmailPrivacy">
+            <label className="form-check-label" htmlFor="EmailPrivacy">
               <div>Keep my Email address private.</div>
               <div className="email-privacy-desc">
                 By making your email address public email address will appear on
@@ -116,17 +117,13 @@ export default function Account() {
 
         <div className="field">
           <div className="mb-3">
-            <button
-              disabled={loading}
-              type="submit"
-              className="btn"
-            >
+            <button disabled={loading} type="submit" className="btn">
               Save Changes
             </button>
             <Link
               to={"/profile/" + currentUserId + "/"}
               type="button"
-              class="btn btn-secondary mx-1"
+              className="btn btn-secondary mx-1"
             >
               Cancel
             </Link>
@@ -144,7 +141,7 @@ export default function Account() {
           <button
             type="button"
             disabled={loading}
-            class="btn btn-outline-danger"
+            className="btn btn-outline-danger"
             onClick={deleteAccount}
           >
             Delete account

@@ -68,7 +68,7 @@ export default function Dashboard() {
                   ""
                 ) : (
                   <div>
-                    <Usercard user={user} />
+                    <Usercard user={user} key={user.uid}/>
                   </div>
                 )
               )

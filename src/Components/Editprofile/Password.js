@@ -113,7 +113,7 @@ export default function Password() {
         <Link
           to={"/user/" + currentUser.uid}
           type="button"
-          class="btn btn-secondary mx-1"
+          className="btn btn-secondary mx-1"
         >
           Cancel
         </Link>

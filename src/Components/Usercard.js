@@ -27,7 +27,7 @@ export default function Usercard(props) {
                   {user.FirstName} {user.LastName}
                 </Link>
                 <div className="user-specialty">
-                  <i class="fas fa-tag" />
+                  <i className="fas fa-tag" />
                   &nbsp;&nbsp;{user.Specialty}
                 </div>
               </div>
@@ -41,12 +41,12 @@ export default function Usercard(props) {
               </button>
             </div>
             <div className="user-socials">
-              {user.GitHub ? <i class="fab fa-github" /> : ""}
-              {user.StackOverflow ? <i class="fab fa-stack-overflow" /> : ""}
-              {user.Website ? <i class="fas fa-link" /> : ""}
-              {user.LinkedIn ? <i class="fab fa-linkedin" /> : ""}
-              {user.Twitter ? <i class="fab fa-twitter" /> : ""}
-              {user.Instagram ? <i class="fab fa-instagram" /> : ""}
+              {user.GitHub ? <i className="fab fa-github" /> : ""}
+              {user.StackOverflow ? <i className="fab fa-stack-overflow" /> : ""}
+              {user.Website ? <i className="fas fa-link" /> : ""}
+              {user.LinkedIn ? <i className="fab fa-linkedin" /> : ""}
+              {user.Twitter ? <i className="fab fa-twitter" /> : ""}
+              {user.Instagram ? <i className="fab fa-instagram" /> : ""}
             </div>
           </div>
         </div>
@@ -54,7 +54,7 @@ export default function Usercard(props) {
         <div className="change-card-display card-secondhalf">
           <div>
             <div className="user-skills-title">
-              <i class="fas fa-tools"></i> SKILLS
+              <i className="fas fa-tools"></i> SKILLS
             </div>
             <div className="user-skills">
               {user.Skills && user.Skills.split(",").map((skill) => (
@@ -64,7 +64,7 @@ export default function Usercard(props) {
           </div>
           <div>
             <div className="user-intrests-title">
-              <i class="far fa-heart"></i> INTRESTS
+              <i className="far fa-heart"></i> INTRESTS
             </div>
             <div className="user-intrests">
               {user.Intrests && user.Intrests.map((intrest) => (
