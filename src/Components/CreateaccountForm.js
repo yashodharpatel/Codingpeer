@@ -8,7 +8,7 @@ export default function CreateaccountForm() {
   const currentUserId = currentUser.uid;
   const currentUserEmail = currentUser.email;
   const profilePicture =
-    "https://i1.wp.com/devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-180.png?ssl=1";
+  "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png";
   const intrests = [];
 
   const [firstName, setFirstName] = useState("");
