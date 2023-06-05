@@ -1,12 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useAuth } from "../Contexts/Authcontext";
 import { Link, useHistory } from "react-router-dom";
+import { database } from "../firebase";
+
 
 export default function Header() {
   const { currentUser, logout } = useAuth();
   const [error, setError] = useState("");
   const uid = currentUser.uid;
   const history = useHistory();
+  const [user, setUser] = useState([]);
 
   async function handleLogout() {
     setError("");
@@ -18,6 +21,13 @@ export default function Header() {
       setError("Failed to log out");
     }
   }
+
+  useEffect(() => {
+    const user = database.ref("users/" + uid);
+    user.once("value", (snapshot) => {
+      setUser(snapshot.val());
+    });
+  }, []);
 
   return (
     <>
@@ -61,7 +71,7 @@ export default function Header() {
                   className="profile-dropdown"
                 >
                   <img
-                    src="https://i1.wp.com/devpost-challengepost.netdna-ssl.com/assets/defaults/no-avatar-180.png?ssl=1"
+                    src={user.ProfilePicture}
                     alt="profile-pic"
                     className="nav-profile-pic"
                   />
